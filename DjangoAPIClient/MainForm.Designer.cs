@@ -53,7 +53,6 @@
             this.subjectDELETE = new System.Windows.Forms.Button();
             this.errorsTB = new System.Windows.Forms.TextBox();
             this.titleLB = new System.Windows.Forms.Label();
-            this.responseLW = new System.Windows.Forms.ListView();
             this.responseGB = new System.Windows.Forms.GroupBox();
             this.errorsGB = new System.Windows.Forms.GroupBox();
             this.filterGB = new System.Windows.Forms.GroupBox();
@@ -66,6 +65,7 @@
             this.filterbirthdateTB = new System.Windows.Forms.TextBox();
             this.filterregdateTB = new System.Windows.Forms.TextBox();
             this.filteridcardTB = new System.Windows.Forms.TextBox();
+            this.responseDGV = new System.Windows.Forms.DataGridView();
             this.getGB.SuspendLayout();
             this.createGB.SuspendLayout();
             this.updateGB.SuspendLayout();
@@ -73,25 +73,26 @@
             this.responseGB.SuspendLayout();
             this.errorsGB.SuspendLayout();
             this.filterGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.responseDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // subjectsGET
             // 
-            this.subjectsGET.Location = new System.Drawing.Point(15, 15);
-            this.subjectsGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsGET.Location = new System.Drawing.Point(20, 18);
+            this.subjectsGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsGET.Name = "subjectsGET";
-            this.subjectsGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsGET.TabIndex = 0;
             this.subjectsGET.Text = "SUBJECTS";
             this.subjectsGET.UseVisualStyleBackColor = true;
-            this.subjectsGET.Click += new System.EventHandler(this.SubjectsGET_Click);
+            this.subjectsGET.Click += new System.EventHandler(this.SubjectListGET_Click);
             // 
             // subjectGET
             // 
-            this.subjectGET.Location = new System.Drawing.Point(15, 48);
-            this.subjectGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectGET.Location = new System.Drawing.Point(20, 59);
+            this.subjectGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectGET.Name = "subjectGET";
-            this.subjectGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectGET.Size = new System.Drawing.Size(152, 34);
             this.subjectGET.TabIndex = 2;
             this.subjectGET.Text = "SUBJECT";
             this.subjectGET.UseVisualStyleBackColor = true;
@@ -103,32 +104,32 @@
             this.getGB.Controls.Add(this.idtypeGET);
             this.getGB.Controls.Add(this.subjectsGET);
             this.getGB.Controls.Add(this.subjectGET);
-            this.getGB.Location = new System.Drawing.Point(7, 91);
-            this.getGB.Margin = new System.Windows.Forms.Padding(2);
+            this.getGB.Location = new System.Drawing.Point(9, 112);
+            this.getGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.getGB.Name = "getGB";
-            this.getGB.Padding = new System.Windows.Forms.Padding(2);
-            this.getGB.Size = new System.Drawing.Size(266, 84);
+            this.getGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getGB.Size = new System.Drawing.Size(355, 103);
             this.getGB.TabIndex = 7;
             this.getGB.TabStop = false;
             this.getGB.Text = "GET";
             // 
             // idtypesGET
             // 
-            this.idtypesGET.Location = new System.Drawing.Point(136, 15);
-            this.idtypesGET.Margin = new System.Windows.Forms.Padding(2);
+            this.idtypesGET.Location = new System.Drawing.Point(181, 18);
+            this.idtypesGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idtypesGET.Name = "idtypesGET";
-            this.idtypesGET.Size = new System.Drawing.Size(114, 28);
+            this.idtypesGET.Size = new System.Drawing.Size(152, 34);
             this.idtypesGET.TabIndex = 12;
             this.idtypesGET.Text = "IDTYPES";
             this.idtypesGET.UseVisualStyleBackColor = true;
-            this.idtypesGET.Click += new System.EventHandler(this.idtypesGET_Click);
+            this.idtypesGET.Click += new System.EventHandler(this.IdTypesGET_Click);
             // 
             // idtypeGET
             // 
-            this.idtypeGET.Location = new System.Drawing.Point(136, 48);
-            this.idtypeGET.Margin = new System.Windows.Forms.Padding(2);
+            this.idtypeGET.Location = new System.Drawing.Point(181, 59);
+            this.idtypeGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idtypeGET.Name = "idtypeGET";
-            this.idtypeGET.Size = new System.Drawing.Size(114, 28);
+            this.idtypeGET.Size = new System.Drawing.Size(152, 34);
             this.idtypeGET.TabIndex = 11;
             this.idtypeGET.Text = "IDTYPE";
             this.idtypeGET.UseVisualStyleBackColor = true;
@@ -136,122 +137,122 @@
             // 
             // subjectsbyphoneGET
             // 
-            this.subjectsbyphoneGET.Location = new System.Drawing.Point(15, 249);
-            this.subjectsbyphoneGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbyphoneGET.Location = new System.Drawing.Point(20, 306);
+            this.subjectsbyphoneGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbyphoneGET.Name = "subjectsbyphoneGET";
-            this.subjectsbyphoneGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbyphoneGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbyphoneGET.TabIndex = 21;
             this.subjectsbyphoneGET.Text = "PHONE";
             this.subjectsbyphoneGET.UseVisualStyleBackColor = true;
-            this.subjectsbyphoneGET.Click += new System.EventHandler(this.SubjectsbyphoneGET_Click);
+            this.subjectsbyphoneGET.Click += new System.EventHandler(this.SubjectsByPhoneGET_Click);
             // 
             // subjectsbyidcardtypeGET
             // 
-            this.subjectsbyidcardtypeGET.Location = new System.Drawing.Point(15, 283);
-            this.subjectsbyidcardtypeGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbyidcardtypeGET.Location = new System.Drawing.Point(20, 348);
+            this.subjectsbyidcardtypeGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbyidcardtypeGET.Name = "subjectsbyidcardtypeGET";
-            this.subjectsbyidcardtypeGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbyidcardtypeGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbyidcardtypeGET.TabIndex = 20;
             this.subjectsbyidcardtypeGET.Text = "IDCARD TYPE";
             this.subjectsbyidcardtypeGET.UseVisualStyleBackColor = true;
-            this.subjectsbyidcardtypeGET.Click += new System.EventHandler(this.SubjectsbyidcardtypeGET_Click);
+            this.subjectsbyidcardtypeGET.Click += new System.EventHandler(this.SubjectsByIdCardTypeGET_Click);
             // 
             // subjectsbyemailGET
             // 
-            this.subjectsbyemailGET.Location = new System.Drawing.Point(15, 216);
-            this.subjectsbyemailGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbyemailGET.Location = new System.Drawing.Point(20, 266);
+            this.subjectsbyemailGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbyemailGET.Name = "subjectsbyemailGET";
-            this.subjectsbyemailGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbyemailGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbyemailGET.TabIndex = 19;
             this.subjectsbyemailGET.Text = "EMAIL";
             this.subjectsbyemailGET.UseVisualStyleBackColor = true;
-            this.subjectsbyemailGET.Click += new System.EventHandler(this.SubjectsbyemailGET_Click);
+            this.subjectsbyemailGET.Click += new System.EventHandler(this.SubjectsByEmailGET_Click);
             // 
             // subjectsbyfullnameGET
             // 
-            this.subjectsbyfullnameGET.Location = new System.Drawing.Point(15, 183);
-            this.subjectsbyfullnameGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbyfullnameGET.Location = new System.Drawing.Point(20, 225);
+            this.subjectsbyfullnameGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbyfullnameGET.Name = "subjectsbyfullnameGET";
-            this.subjectsbyfullnameGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbyfullnameGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbyfullnameGET.TabIndex = 18;
             this.subjectsbyfullnameGET.Text = "FULLNAME";
             this.subjectsbyfullnameGET.UseVisualStyleBackColor = true;
-            this.subjectsbyfullnameGET.Click += new System.EventHandler(this.SubjectsbyfullnameGET_Click);
+            this.subjectsbyfullnameGET.Click += new System.EventHandler(this.SubjectsByFullNameGET_Click);
             // 
             // subjectsbygenderGET
             // 
-            this.subjectsbygenderGET.Location = new System.Drawing.Point(15, 149);
-            this.subjectsbygenderGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbygenderGET.Location = new System.Drawing.Point(20, 183);
+            this.subjectsbygenderGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbygenderGET.Name = "subjectsbygenderGET";
-            this.subjectsbygenderGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbygenderGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbygenderGET.TabIndex = 17;
             this.subjectsbygenderGET.Text = "GENDER";
             this.subjectsbygenderGET.UseVisualStyleBackColor = true;
-            this.subjectsbygenderGET.Click += new System.EventHandler(this.SubjectsbygenderGET_Click);
+            this.subjectsbygenderGET.Click += new System.EventHandler(this.SubjectsByGenderGET_Click);
             // 
             // subjectsbycountryGET
             // 
-            this.subjectsbycountryGET.Location = new System.Drawing.Point(15, 116);
-            this.subjectsbycountryGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbycountryGET.Location = new System.Drawing.Point(20, 143);
+            this.subjectsbycountryGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbycountryGET.Name = "subjectsbycountryGET";
-            this.subjectsbycountryGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbycountryGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbycountryGET.TabIndex = 16;
             this.subjectsbycountryGET.Text = "COUNTRY";
             this.subjectsbycountryGET.UseVisualStyleBackColor = true;
-            this.subjectsbycountryGET.Click += new System.EventHandler(this.SubjectsbycountryGET_Click);
+            this.subjectsbycountryGET.Click += new System.EventHandler(this.SubjectsByCountryGET_Click);
             // 
             // subjectsbybirthdateGET
             // 
-            this.subjectsbybirthdateGET.Location = new System.Drawing.Point(15, 83);
-            this.subjectsbybirthdateGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbybirthdateGET.Location = new System.Drawing.Point(20, 102);
+            this.subjectsbybirthdateGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbybirthdateGET.Name = "subjectsbybirthdateGET";
-            this.subjectsbybirthdateGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbybirthdateGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbybirthdateGET.TabIndex = 15;
             this.subjectsbybirthdateGET.Text = "BIRTHDATE";
             this.subjectsbybirthdateGET.UseVisualStyleBackColor = true;
-            this.subjectsbybirthdateGET.Click += new System.EventHandler(this.SubjectsbybirthdateGET_Click);
+            this.subjectsbybirthdateGET.Click += new System.EventHandler(this.SubjectsByBirthdateGET_Click);
             // 
             // subjectsbyregdateGET
             // 
-            this.subjectsbyregdateGET.Location = new System.Drawing.Point(15, 49);
-            this.subjectsbyregdateGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectsbyregdateGET.Location = new System.Drawing.Point(20, 60);
+            this.subjectsbyregdateGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectsbyregdateGET.Name = "subjectsbyregdateGET";
-            this.subjectsbyregdateGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectsbyregdateGET.Size = new System.Drawing.Size(152, 34);
             this.subjectsbyregdateGET.TabIndex = 14;
             this.subjectsbyregdateGET.Text = "REGDATE";
             this.subjectsbyregdateGET.UseVisualStyleBackColor = true;
-            this.subjectsbyregdateGET.Click += new System.EventHandler(this.SubjectsbyregdateGET_Click);
+            this.subjectsbyregdateGET.Click += new System.EventHandler(this.SubjectsByRegdateGET_Click);
             // 
             // subjectbyidcardGET
             // 
-            this.subjectbyidcardGET.Location = new System.Drawing.Point(15, 16);
-            this.subjectbyidcardGET.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectbyidcardGET.Location = new System.Drawing.Point(20, 20);
+            this.subjectbyidcardGET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectbyidcardGET.Name = "subjectbyidcardGET";
-            this.subjectbyidcardGET.Size = new System.Drawing.Size(114, 28);
+            this.subjectbyidcardGET.Size = new System.Drawing.Size(152, 34);
             this.subjectbyidcardGET.TabIndex = 13;
             this.subjectbyidcardGET.Text = "IDCARD";
             this.subjectbyidcardGET.UseVisualStyleBackColor = true;
-            this.subjectbyidcardGET.Click += new System.EventHandler(this.SubjectbyidcardGET_Click);
+            this.subjectbyidcardGET.Click += new System.EventHandler(this.SubjectByIdCardGET_Click);
             // 
             // createGB
             // 
             this.createGB.Controls.Add(this.idtypeCREATE);
             this.createGB.Controls.Add(this.subjectCREATE);
-            this.createGB.Location = new System.Drawing.Point(7, 37);
-            this.createGB.Margin = new System.Windows.Forms.Padding(2);
+            this.createGB.Location = new System.Drawing.Point(9, 46);
+            this.createGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createGB.Name = "createGB";
-            this.createGB.Padding = new System.Windows.Forms.Padding(2);
-            this.createGB.Size = new System.Drawing.Size(266, 51);
+            this.createGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.createGB.Size = new System.Drawing.Size(355, 63);
             this.createGB.TabIndex = 8;
             this.createGB.TabStop = false;
             this.createGB.Text = "CREATE";
             // 
             // idtypeCREATE
             // 
-            this.idtypeCREATE.Location = new System.Drawing.Point(136, 15);
-            this.idtypeCREATE.Margin = new System.Windows.Forms.Padding(2);
+            this.idtypeCREATE.Location = new System.Drawing.Point(181, 18);
+            this.idtypeCREATE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idtypeCREATE.Name = "idtypeCREATE";
-            this.idtypeCREATE.Size = new System.Drawing.Size(114, 28);
+            this.idtypeCREATE.Size = new System.Drawing.Size(152, 34);
             this.idtypeCREATE.TabIndex = 10;
             this.idtypeCREATE.Text = "IDTYPE";
             this.idtypeCREATE.UseVisualStyleBackColor = true;
@@ -259,10 +260,10 @@
             // 
             // subjectCREATE
             // 
-            this.subjectCREATE.Location = new System.Drawing.Point(15, 15);
-            this.subjectCREATE.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectCREATE.Location = new System.Drawing.Point(20, 18);
+            this.subjectCREATE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectCREATE.Name = "subjectCREATE";
-            this.subjectCREATE.Size = new System.Drawing.Size(114, 28);
+            this.subjectCREATE.Size = new System.Drawing.Size(152, 34);
             this.subjectCREATE.TabIndex = 7;
             this.subjectCREATE.Text = "SUBJECT";
             this.subjectCREATE.UseVisualStyleBackColor = true;
@@ -272,32 +273,32 @@
             // 
             this.updateGB.Controls.Add(this.idtypeUPDATE);
             this.updateGB.Controls.Add(this.subjectUPDATE);
-            this.updateGB.Location = new System.Drawing.Point(7, 541);
-            this.updateGB.Margin = new System.Windows.Forms.Padding(2);
+            this.updateGB.Location = new System.Drawing.Point(9, 666);
+            this.updateGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateGB.Name = "updateGB";
-            this.updateGB.Padding = new System.Windows.Forms.Padding(2);
-            this.updateGB.Size = new System.Drawing.Size(266, 50);
+            this.updateGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateGB.Size = new System.Drawing.Size(355, 62);
             this.updateGB.TabIndex = 9;
             this.updateGB.TabStop = false;
             this.updateGB.Text = "UPDATE";
             // 
             // idtypeUPDATE
             // 
-            this.idtypeUPDATE.Location = new System.Drawing.Point(134, 15);
-            this.idtypeUPDATE.Margin = new System.Windows.Forms.Padding(2);
+            this.idtypeUPDATE.Location = new System.Drawing.Point(179, 18);
+            this.idtypeUPDATE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idtypeUPDATE.Name = "idtypeUPDATE";
-            this.idtypeUPDATE.Size = new System.Drawing.Size(114, 28);
+            this.idtypeUPDATE.Size = new System.Drawing.Size(152, 34);
             this.idtypeUPDATE.TabIndex = 12;
             this.idtypeUPDATE.Text = "IDTYPE";
             this.idtypeUPDATE.UseVisualStyleBackColor = true;
-            this.idtypeUPDATE.Click += new System.EventHandler(this.IdtypeUPDATE_Click);
+            this.idtypeUPDATE.Click += new System.EventHandler(this.IdTypeUPDATE_Click);
             // 
             // subjectUPDATE
             // 
-            this.subjectUPDATE.Location = new System.Drawing.Point(15, 15);
-            this.subjectUPDATE.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectUPDATE.Location = new System.Drawing.Point(20, 18);
+            this.subjectUPDATE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectUPDATE.Name = "subjectUPDATE";
-            this.subjectUPDATE.Size = new System.Drawing.Size(114, 28);
+            this.subjectUPDATE.Size = new System.Drawing.Size(152, 34);
             this.subjectUPDATE.TabIndex = 7;
             this.subjectUPDATE.Text = "SUBJECT";
             this.subjectUPDATE.UseVisualStyleBackColor = true;
@@ -307,21 +308,21 @@
             // 
             this.deleteGB.Controls.Add(this.idtypeDELETE);
             this.deleteGB.Controls.Add(this.subjectDELETE);
-            this.deleteGB.Location = new System.Drawing.Point(7, 595);
-            this.deleteGB.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteGB.Location = new System.Drawing.Point(9, 732);
+            this.deleteGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteGB.Name = "deleteGB";
-            this.deleteGB.Padding = new System.Windows.Forms.Padding(2);
-            this.deleteGB.Size = new System.Drawing.Size(266, 50);
+            this.deleteGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteGB.Size = new System.Drawing.Size(355, 62);
             this.deleteGB.TabIndex = 10;
             this.deleteGB.TabStop = false;
             this.deleteGB.Text = "DELETE";
             // 
             // idtypeDELETE
             // 
-            this.idtypeDELETE.Location = new System.Drawing.Point(134, 15);
-            this.idtypeDELETE.Margin = new System.Windows.Forms.Padding(2);
+            this.idtypeDELETE.Location = new System.Drawing.Point(179, 18);
+            this.idtypeDELETE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idtypeDELETE.Name = "idtypeDELETE";
-            this.idtypeDELETE.Size = new System.Drawing.Size(114, 28);
+            this.idtypeDELETE.Size = new System.Drawing.Size(152, 34);
             this.idtypeDELETE.TabIndex = 11;
             this.idtypeDELETE.Text = "IDTYPE";
             this.idtypeDELETE.UseVisualStyleBackColor = true;
@@ -329,10 +330,10 @@
             // 
             // subjectDELETE
             // 
-            this.subjectDELETE.Location = new System.Drawing.Point(15, 15);
-            this.subjectDELETE.Margin = new System.Windows.Forms.Padding(2);
+            this.subjectDELETE.Location = new System.Drawing.Point(20, 18);
+            this.subjectDELETE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subjectDELETE.Name = "subjectDELETE";
-            this.subjectDELETE.Size = new System.Drawing.Size(112, 28);
+            this.subjectDELETE.Size = new System.Drawing.Size(149, 34);
             this.subjectDELETE.TabIndex = 7;
             this.subjectDELETE.Text = "SUBJECT";
             this.subjectDELETE.UseVisualStyleBackColor = true;
@@ -340,41 +341,31 @@
             // 
             // errorsTB
             // 
-            this.errorsTB.Location = new System.Drawing.Point(5, 20);
-            this.errorsTB.Margin = new System.Windows.Forms.Padding(2);
+            this.errorsTB.Location = new System.Drawing.Point(7, 25);
+            this.errorsTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.errorsTB.Multiline = true;
             this.errorsTB.Name = "errorsTB";
-            this.errorsTB.Size = new System.Drawing.Size(825, 116);
+            this.errorsTB.Size = new System.Drawing.Size(1099, 142);
             this.errorsTB.TabIndex = 11;
             // 
             // titleLB
             // 
             this.titleLB.AutoSize = true;
             this.titleLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLB.Location = new System.Drawing.Point(444, 9);
-            this.titleLB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titleLB.Location = new System.Drawing.Point(592, 11);
             this.titleLB.Name = "titleLB";
-            this.titleLB.Size = new System.Drawing.Size(216, 20);
+            this.titleLB.Size = new System.Drawing.Size(265, 25);
             this.titleLB.TabIndex = 16;
             this.titleLB.Text = "TESTING GDPR-APP-API";
             // 
-            // responseLW
-            // 
-            this.responseLW.Location = new System.Drawing.Point(5, 15);
-            this.responseLW.Name = "responseLW";
-            this.responseLW.Size = new System.Drawing.Size(836, 438);
-            this.responseLW.TabIndex = 17;
-            this.responseLW.UseCompatibleStateImageBehavior = false;
-            this.responseLW.View = System.Windows.Forms.View.Details;
-            // 
             // responseGB
             // 
-            this.responseGB.Controls.Add(this.responseLW);
-            this.responseGB.Location = new System.Drawing.Point(277, 37);
-            this.responseGB.Margin = new System.Windows.Forms.Padding(2);
+            this.responseGB.Controls.Add(this.responseDGV);
+            this.responseGB.Location = new System.Drawing.Point(369, 46);
+            this.responseGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.responseGB.Name = "responseGB";
-            this.responseGB.Padding = new System.Windows.Forms.Padding(2);
-            this.responseGB.Size = new System.Drawing.Size(846, 462);
+            this.responseGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.responseGB.Size = new System.Drawing.Size(1128, 569);
             this.responseGB.TabIndex = 18;
             this.responseGB.TabStop = false;
             this.responseGB.Text = "RESPONSE";
@@ -382,11 +373,11 @@
             // errorsGB
             // 
             this.errorsGB.Controls.Add(this.errorsTB);
-            this.errorsGB.Location = new System.Drawing.Point(277, 502);
-            this.errorsGB.Margin = new System.Windows.Forms.Padding(2);
+            this.errorsGB.Location = new System.Drawing.Point(369, 618);
+            this.errorsGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.errorsGB.Name = "errorsGB";
-            this.errorsGB.Padding = new System.Windows.Forms.Padding(2);
-            this.errorsGB.Size = new System.Drawing.Size(846, 142);
+            this.errorsGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.errorsGB.Size = new System.Drawing.Size(1128, 175);
             this.errorsGB.TabIndex = 19;
             this.errorsGB.TabStop = false;
             this.errorsGB.Text = "ERRORS";
@@ -411,92 +402,101 @@
             this.filterGB.Controls.Add(this.subjectsbybirthdateGET);
             this.filterGB.Controls.Add(this.subjectsbygenderGET);
             this.filterGB.Controls.Add(this.subjectsbycountryGET);
-            this.filterGB.Location = new System.Drawing.Point(7, 179);
-            this.filterGB.Margin = new System.Windows.Forms.Padding(2);
+            this.filterGB.Location = new System.Drawing.Point(9, 220);
+            this.filterGB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterGB.Name = "filterGB";
-            this.filterGB.Padding = new System.Windows.Forms.Padding(2);
-            this.filterGB.Size = new System.Drawing.Size(266, 358);
+            this.filterGB.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filterGB.Size = new System.Drawing.Size(355, 441);
             this.filterGB.TabIndex = 20;
             this.filterGB.TabStop = false;
             this.filterGB.Text = "FILTER BY";
             // 
             // filteridcardtypeTB
             // 
-            this.filteridcardtypeTB.Location = new System.Drawing.Point(136, 288);
-            this.filteridcardtypeTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filteridcardtypeTB.Location = new System.Drawing.Point(181, 354);
+            this.filteridcardtypeTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filteridcardtypeTB.Name = "filteridcardtypeTB";
-            this.filteridcardtypeTB.Size = new System.Drawing.Size(113, 20);
+            this.filteridcardtypeTB.Size = new System.Drawing.Size(149, 22);
             this.filteridcardtypeTB.TabIndex = 30;
             // 
             // filterphoneTB
             // 
-            this.filterphoneTB.Location = new System.Drawing.Point(136, 254);
-            this.filterphoneTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filterphoneTB.Location = new System.Drawing.Point(181, 313);
+            this.filterphoneTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterphoneTB.Name = "filterphoneTB";
-            this.filterphoneTB.Size = new System.Drawing.Size(113, 20);
+            this.filterphoneTB.Size = new System.Drawing.Size(149, 22);
             this.filterphoneTB.TabIndex = 29;
             // 
             // filteremailTB
             // 
-            this.filteremailTB.Location = new System.Drawing.Point(138, 221);
-            this.filteremailTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filteremailTB.Location = new System.Drawing.Point(184, 272);
+            this.filteremailTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filteremailTB.Name = "filteremailTB";
-            this.filteremailTB.Size = new System.Drawing.Size(113, 20);
+            this.filteremailTB.Size = new System.Drawing.Size(149, 22);
             this.filteremailTB.TabIndex = 28;
             // 
             // filterfullnameTB
             // 
-            this.filterfullnameTB.Location = new System.Drawing.Point(139, 188);
-            this.filterfullnameTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filterfullnameTB.Location = new System.Drawing.Point(185, 231);
+            this.filterfullnameTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterfullnameTB.Name = "filterfullnameTB";
-            this.filterfullnameTB.Size = new System.Drawing.Size(113, 20);
+            this.filterfullnameTB.Size = new System.Drawing.Size(149, 22);
             this.filterfullnameTB.TabIndex = 27;
             // 
             // filtergenderTB
             // 
-            this.filtergenderTB.Location = new System.Drawing.Point(139, 154);
-            this.filtergenderTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filtergenderTB.Location = new System.Drawing.Point(185, 190);
+            this.filtergenderTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filtergenderTB.Name = "filtergenderTB";
-            this.filtergenderTB.Size = new System.Drawing.Size(113, 20);
+            this.filtergenderTB.Size = new System.Drawing.Size(149, 22);
             this.filtergenderTB.TabIndex = 26;
             // 
             // filtercountryTB
             // 
-            this.filtercountryTB.Location = new System.Drawing.Point(139, 121);
-            this.filtercountryTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filtercountryTB.Location = new System.Drawing.Point(185, 149);
+            this.filtercountryTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filtercountryTB.Name = "filtercountryTB";
-            this.filtercountryTB.Size = new System.Drawing.Size(113, 20);
+            this.filtercountryTB.Size = new System.Drawing.Size(149, 22);
             this.filtercountryTB.TabIndex = 25;
             // 
             // filterbirthdateTB
             // 
-            this.filterbirthdateTB.Location = new System.Drawing.Point(138, 88);
-            this.filterbirthdateTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filterbirthdateTB.Location = new System.Drawing.Point(184, 108);
+            this.filterbirthdateTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterbirthdateTB.Name = "filterbirthdateTB";
-            this.filterbirthdateTB.Size = new System.Drawing.Size(113, 20);
+            this.filterbirthdateTB.Size = new System.Drawing.Size(149, 22);
             this.filterbirthdateTB.TabIndex = 24;
             // 
             // filterregdateTB
             // 
-            this.filterregdateTB.Location = new System.Drawing.Point(139, 54);
-            this.filterregdateTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filterregdateTB.Location = new System.Drawing.Point(185, 66);
+            this.filterregdateTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterregdateTB.Name = "filterregdateTB";
-            this.filterregdateTB.Size = new System.Drawing.Size(113, 20);
+            this.filterregdateTB.Size = new System.Drawing.Size(149, 22);
             this.filterregdateTB.TabIndex = 23;
             // 
             // filteridcardTB
             // 
-            this.filteridcardTB.Location = new System.Drawing.Point(139, 21);
-            this.filteridcardTB.Margin = new System.Windows.Forms.Padding(2);
+            this.filteridcardTB.Location = new System.Drawing.Point(185, 26);
+            this.filteridcardTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filteridcardTB.Name = "filteridcardTB";
-            this.filteridcardTB.Size = new System.Drawing.Size(113, 20);
+            this.filteridcardTB.Size = new System.Drawing.Size(149, 22);
             this.filteridcardTB.TabIndex = 22;
+            // 
+            // responseDGV
+            // 
+            this.responseDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.responseDGV.Location = new System.Drawing.Point(7, 20);
+            this.responseDGV.Name = "responseDGV";
+            this.responseDGV.RowTemplate.Height = 24;
+            this.responseDGV.Size = new System.Drawing.Size(1115, 536);
+            this.responseDGV.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 653);
+            this.ClientSize = new System.Drawing.Size(1509, 804);
             this.Controls.Add(this.filterGB);
             this.Controls.Add(this.errorsGB);
             this.Controls.Add(this.responseGB);
@@ -505,7 +505,7 @@
             this.Controls.Add(this.updateGB);
             this.Controls.Add(this.createGB);
             this.Controls.Add(this.getGB);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -520,6 +520,7 @@
             this.errorsGB.PerformLayout();
             this.filterGB.ResumeLayout(false);
             this.filterGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.responseDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,7 +553,6 @@
         private System.Windows.Forms.Button subjectsbyidcardtypeGET;
         private System.Windows.Forms.Button subjectsbyphoneGET;
         private System.Windows.Forms.Label titleLB;
-        private System.Windows.Forms.ListView responseLW;
         private System.Windows.Forms.GroupBox responseGB;
         private System.Windows.Forms.GroupBox errorsGB;
         private System.Windows.Forms.GroupBox filterGB;
@@ -565,6 +565,7 @@
         private System.Windows.Forms.TextBox filterbirthdateTB;
         private System.Windows.Forms.TextBox filterregdateTB;
         private System.Windows.Forms.TextBox filteridcardTB;
+        private System.Windows.Forms.DataGridView responseDGV;
     }
 }
 

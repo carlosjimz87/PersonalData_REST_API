@@ -20,7 +20,7 @@ namespace DjangoAPIClient
         {
             InitializeComponent();
             Ids = ids;
-            Init(title,ids);
+            Init(title, ids);
         }
         
         private void Init(string title, List<int> ids)

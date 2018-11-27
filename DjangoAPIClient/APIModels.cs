@@ -67,7 +67,7 @@ namespace DjangoAPIClient
         public string Country { get; set; }
         [JsonProperty("Gender")]
         public string Gender { get; set; }
-        [JsonProperty("BirthDate"),JsonConverter(typeof(CustomDateTimeConverter))]
+        [JsonProperty("BirthDate"), JsonConverter(typeof(CustomDateTimeConverter))]
         //[JsonProperty("BirthDate")]
         public DateTime BirthDate { get; set; }
         [JsonProperty("RegistrationDate"), JsonConverter(typeof(CustomDateTimeConverter))]
